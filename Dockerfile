@@ -1,7 +1,6 @@
-FROM node:12.2.0-alpine
-WORKDIR app
-COPY . .
-RUN npm install
-RUN npm run test
-EXPOSE 8000
-CMD ["node","app.js"]
+# Pull base image 
+From tomcat:8-jre8 
+
+# Maintainer 
+MAINTAINER "svn2997@gmail.com" 
+COPY ./webapp.war /usr/local/tomcat/webapps
